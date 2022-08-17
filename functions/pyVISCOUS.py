@@ -1,9 +1,5 @@
-# The functions are programmed by Hongli Liu (hongli.liu@usask.ca)
-# ----------------------------------------------------------------
-# The VISCOUS algorithm is proposed by Sheikholeslami et al. (2021).
-# Sheikholeslami, R., Gharari, S., Papalexiou, S. M., & Clark, M. P. (2021) 
-# VISCOUS: A variance-based sensitivity analysis using copulas for efficient identification of dominant hydrological processes. 
-# Water Resources Research, 57, e2020WR028435. https://doi.org/10.1029/2020WR028435
+# pyVISCOUS.py include the open-source code of the VISCOUS framework. 
+# pyVISCOUS.py is independent from models and can be applied with user-provided input-output data.
 
 import numpy as np
 import pandas as pd
@@ -250,7 +246,8 @@ def VISCOUS(x,y,zx,zy,sensType,GSAIndex,N1,N2,n_components):
     
     Returns
     -------
-    sensIndex : array, shape (nGSAGroup,). Sensitivity index result.
+    sensIndex     : array, shape (nGSAGroup,). Sensitivity index result of all evaluated variable groups.
+    fitted_gmm_ls : list, length (nGSAGroup).  Best fitted GMM results of all evaluated variable groups.
     
     Notes
     -------
