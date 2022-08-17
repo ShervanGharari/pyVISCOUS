@@ -1,4 +1,4 @@
-# pyVISCOUS.py include the open-source code of the VISCOUS framework. 
+# pyVISCOUS.py includes the open-source code of the VISCOUS framework. 
 # pyVISCOUS.py is independent from models and can be applied with user-provided input-output data.
 
 import numpy as np
